@@ -1,0 +1,30 @@
+* {padding: 0;margin: 0;box-sizing: border-box;-webkit-box-sizing: border-box}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+:root {
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    --key-background: hsl(225, 21%, 49%);
+    --blue-key-shadow: hsl(224, 28%, 35%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%);
+}
+body {background-color: var(--main-background);height: 100vh;display: flex;justify-content: center;align-items: center;font-family: 'League Spartan', sans-serif;padding: 0 15px}
+.parent {height: 600px;width: 450px;}
+.parent .res {padding: 35px;font-size: 60px;font-weight: bold;background-color: var(--screen-background);border-radius: 10px;color: #fff;text-align: right;margin-bottom: 25px;}
+.parent .P-skle {background-color: hsl(225, 30%, 21%);padding: 20px;border-radius: 10px;}
+.parent .skle {display: grid;grid-template-columns: repeat(4, 1fr);text-align: center;gap: 20px}
+.parent .skle span {background-color: #fff;color: var(--toggle-background);padding: 20px;font-weight: bold;font-size: 22px;cursor: pointer;border-radius: 8px;}
+.parent .skle span:nth-child(4) {background-color: hsl(224, 51%, 76%);color: #fff;}
+.parent .P-skle .buttons {margin-top: 20px;display: flex;gap: 20px}
+.parent .P-skle .buttons button {padding: 15px 0;border: none;width: calc(100% / 2);border-radius: 8px;font-weight: bold;font-size: 20px;cursor: pointer;color: #fff}
+.parent .P-skle .buttons button:first-child {background-color: hsl(224, 51%, 76%);}
+.parent .P-skle .buttons button:last-child {background-color: var(--Dark-red-key-shadow);}
+
+@media (max-width: 375px) {.parent .skle {gap: 12px;}.parent .P-skle .buttons {gap: 12px;margin-top: 12px;}.parent .skle span,.parent .skle p {padding: 20px 15px;font-size: 19px;}}
